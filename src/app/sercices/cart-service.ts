@@ -12,6 +12,6 @@ export class CartService {
   }
 
   remove(index: number) {
-    this.cart.update(prev => prev.filter((item, i) => i !== index))
+    this.cart.update(prev => prev.filter((_, i) => i !== index))
   }
 }
