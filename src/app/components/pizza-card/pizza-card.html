@@ -1,0 +1,18 @@
+<p-card>
+    <ng-template #header>
+        <img class="w-full" src="https://picsum.photos/300/200?seed={{pizza().id}}">
+    </ng-template>
+    <ng-template #title>
+        {{pizza().nom}}
+    </ng-template>
+    <div>
+        prix: {{pizza().prix}} €
+    </div>
+    <ng-template #footer>
+        <p-button label = "Ajouter au panier" 
+                icon="pi pi-plus"
+                iconPos="right"
+                severity="success"
+                (onClick)="addToCart()"></p-button>
+    </ng-template>
+</p-card>
